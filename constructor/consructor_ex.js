@@ -96,11 +96,12 @@ function User(name, age) {
     this.weight = weight;
     this.price = price;
     this.calculate = function (weight) {
-      return this.price * (weight / this.weight);
+      return this.price * (weight / this.weight) + "원 입니다.";
     };
   }
   
-  const product = new Meat("삼겹살", 100, 1600);
+  const 삼겹살 = new Meat("삼겹살", 100, 1600);
+  const 오겹살 = new Meat("오겹살", 100, 1300);
   
-  //alert('가격은' + product.calculate(Number(prompt('삼겹살을 사고싶은 무게를 입력해주세요')))+'원 입니다.');
-  
+  console.log(삼겹살.calculate(200));
+  console.log(오겹살.calculate(200));
